@@ -16,7 +16,7 @@ import CryptoSwift
 class HttpRequest: NSObject {
 
     //Retrive all marvel characters
-    func getCharacters(completionHandler: @escaping ([Character]?,Error?) -> Void)
+    func getCharacters(offset:String, completionHandler: @escaping ([Character]?,Error?) -> Void)
     {
         
         let urlEventos = "http://gateway.marvel.com/v1/public/characters"
@@ -29,7 +29,8 @@ class HttpRequest: NSObject {
         let parameters = [
             "apikey": apiKey,
             "ts": timeStamp,
-            "hash": hash
+            "hash": hash,
+            "offset": offset
         ]
         
         Alamofire.request(urlEventos, method: .get, parameters: parameters).responseJSON { (responseData) -> Void in

@@ -11,7 +11,6 @@ import ObjectMapper
 
 class Items: Mappable {
 
-    
     var resourceURI : String?
     var name : String?
     
@@ -20,8 +19,8 @@ class Items: Mappable {
     }
     
     func mapping(map: Map) {
-        resourceURI  <- map["resourceURI"]
-        name <- map["name"]
+        resourceURI <- map["resourceURI"]
+        name        <- map["name"]
     }
 }
 

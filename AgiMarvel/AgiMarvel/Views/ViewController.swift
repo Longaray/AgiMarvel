@@ -13,10 +13,13 @@ class ViewController: UIViewController {
 
     private var request = HttpRequest()
     private var charactersList = [Character]()
+
+    @IBOutlet weak var characterTableView:UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        SVProgressHUD.show()
+        /*SVProgressHUD.show()
         
         //Populate list with all characters
         request.getCharacters(completionHandler: {characters,error  in
@@ -27,6 +30,7 @@ class ViewController: UIViewController {
             
             SVProgressHUD.dismiss()
         })
+         */
     }
 
 

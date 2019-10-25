@@ -11,7 +11,6 @@ import ObjectMapper
 
 class Comics: Mappable {
 
-    
     var items = [Items]()
     var collectionURI : String?
     
@@ -20,8 +19,8 @@ class Comics: Mappable {
     }
     
     func mapping(map: Map) {
-        items  <- map["items"]
-        collectionURI <- map["collectionURI"]
+        items           <- map["items"]
+        collectionURI   <- map["collectionURI"]
     }
 }
 
