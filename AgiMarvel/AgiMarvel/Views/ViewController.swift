@@ -18,19 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        /*SVProgressHUD.show()
-        
-        //Populate list with all characters
-        request.getCharacters(completionHandler: {characters,error  in
-            guard error == nil else {
-                return
-            }
-            self.charactersList = characters ?? []
-            
-            SVProgressHUD.dismiss()
-        })
-         */
+
     }
 
 

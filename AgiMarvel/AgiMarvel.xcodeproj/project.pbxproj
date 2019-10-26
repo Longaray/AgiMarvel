@@ -16,6 +16,9 @@
 		5B1A048A2360EF1800E9EB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1A04882360EF1800E9EB1F /* LaunchScreen.storyboard */; };
 		5B1A04952360EF1800E9EB1F /* AgiMarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A04942360EF1800E9EB1F /* AgiMarvelTests.swift */; };
 		5B1A04A02360EF1800E9EB1F /* AgiMarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A049F2360EF1800E9EB1F /* AgiMarvelUITests.swift */; };
+		5B1D0597236327CC00285684 /* CharacterBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D0596236327CC00285684 /* CharacterBioViewController.swift */; };
+		5B5DBBE72363385F005A4791 /* CharacterComicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DBBE62363385F005A4791 /* CharacterComicsTableViewController.swift */; };
+		5B5DBBEB23638473005A4791 /* ComicViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DBBEA23638473005A4791 /* ComicViewTableCell.swift */; };
 		5B62E0A42362147F005E8736 /* CharacterViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62E0A32362147F005E8736 /* CharacterViewTableCell.swift */; };
 		5B62E0A6236218C6005E8736 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62E0A5236218C6005E8736 /* CharacterTableViewController.swift */; };
 		5BB443C52361BFFD00080590 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB443C42361BFFD00080590 /* HttpRequest.swift */; };
@@ -61,6 +64,9 @@
 		5B1A049B2360EF1800E9EB1F /* AgiMarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgiMarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1A049F2360EF1800E9EB1F /* AgiMarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgiMarvelUITests.swift; sourceTree = "<group>"; };
 		5B1A04A12360EF1800E9EB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1D0596236327CC00285684 /* CharacterBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBioViewController.swift; sourceTree = "<group>"; };
+		5B5DBBE62363385F005A4791 /* CharacterComicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComicsTableViewController.swift; sourceTree = "<group>"; };
+		5B5DBBEA23638473005A4791 /* ComicViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewTableCell.swift; sourceTree = "<group>"; };
 		5B62E0A32362147F005E8736 /* CharacterViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewTableCell.swift; sourceTree = "<group>"; };
 		5B62E0A5236218C6005E8736 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
 		5BB443C42361BFFD00080590 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -165,6 +171,9 @@
 				5B1A04812360EF1700E9EB1F /* ViewController.swift */,
 				5B62E0A5236218C6005E8736 /* CharacterTableViewController.swift */,
 				5B62E0A32362147F005E8736 /* CharacterViewTableCell.swift */,
+				5B5DBBEA23638473005A4791 /* ComicViewTableCell.swift */,
+				5B1D0596236327CC00285684 /* CharacterBioViewController.swift */,
+				5B5DBBE62363385F005A4791 /* CharacterComicsTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -455,9 +464,12 @@
 				5B62E0A42362147F005E8736 /* CharacterViewTableCell.swift in Sources */,
 				5BB443C52361BFFD00080590 /* HttpRequest.swift in Sources */,
 				5BB443CC236201F300080590 /* Items.swift in Sources */,
+				5B1D0597236327CC00285684 /* CharacterBioViewController.swift in Sources */,
 				5BB443CA2361E80E00080590 /* Thumbnail.swift in Sources */,
+				5B5DBBEB23638473005A4791 /* ComicViewTableCell.swift in Sources */,
 				5BB443C82361DF8A00080590 /* Character.swift in Sources */,
 				5BB443CE236204DF00080590 /* Comics.swift in Sources */,
+				5B5DBBE72363385F005A4791 /* CharacterComicsTableViewController.swift in Sources */,
 				5B1A047E2360EF1700E9EB1F /* AppDelegate.swift in Sources */,
 				5B1A04802360EF1700E9EB1F /* SceneDelegate.swift in Sources */,
 			);

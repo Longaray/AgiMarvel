@@ -21,6 +21,7 @@ class CharacterTableViewController: UITableViewController, UITableViewDataSource
     private var characterList  = [Character]()
     private var request = HttpRequest()
     private var offSet = 0
+    private var totalCharacters = 0
     //var selectedType = Type()
     
    override func viewDidLoad() {
@@ -33,22 +34,22 @@ class CharacterTableViewController: UITableViewController, UITableViewDataSource
         }
     
         SVProgressHUD.show()
-        /*
-        //Populate list with all characters
-    request.getCharacters(offset: String(self.offSet), completionHandler: {characters,error  in
+        
+        //Get total of charaters
+        request.getTotalCharacters(completionHandler: {total,error  in
             guard error == nil else {
                 return
             }
-            self.characterList = characters ?? []
-            self.offSet+=20
+            self.totalCharacters = total
             self.tbtTable.reloadData()
-            SVProgressHUD.dismiss()
-        })*/
+            //SVProgressHUD.dismiss()
+        })
         
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1493 /*total servidor*/ //self.characterList.count;
+        //Total characters server
+        return self.totalCharacters
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -68,43 +69,23 @@ class CharacterTableViewController: UITableViewController, UITableViewDataSource
             cell.ivImg?.image = UIImage(data: data!)
             cell.tag = indexPath.row
 
-            /*let button : UIButton = UIButton(type: UIButtonType.custom) as UIButton
-            button.frame = CGRect(x: 300, y: -30, width: 100, height: 100)
-            //button.center = (cell?.rightAnchor)!
-            button.addTarget(self, action: Selector("buttonClicked:"), for:
-                UIControlEvents.touchUpInside)
-            button.setImage(UIImage(named:"radio-on"), for: UIControlState.selected)
-            button.setImage(UIImage(named:"radio-off"), for: UIControlState.normal)
-            button.tag = indexPath.row
-            cell?.addSubview(button)
-            //Add button to list for later use
-            self.radioList.append(button)
-             */
         }
         
         return cell
     }
  
-    /*
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        //var cell = self.tbtTable.dequeueReusableCell(withIdentifier: "TableCell")
-    }
-    */
-    
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         //SVProgressHUD.show()
         
         if indexPaths.contains(where: isLoadingCell) {
             
-          //Populate list with all characters
+            //Populate list with all characters
             request.getCharacters(offset: String(self.offSet), completionHandler: {characters,error  in
               guard error == nil else {
                   return
               }
                 self.characterList.append(contentsOf:(characters ?? []))
-                //self.offSet+=20
-                //print("offSet: \(self.offSet)" )
+
                 self.tbtTable.reloadData()
                 SVProgressHUD.dismiss()
           })
@@ -128,6 +109,16 @@ class CharacterTableViewController: UITableViewController, UITableViewDataSource
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CharacterBioViewController") as! CharacterBioViewController
+        controller.setCharacter(character: self.characterList[indexPath.row])
+
+        self.present(controller, animated: true, completion: nil)
+        
     }
     
 }
